@@ -49,9 +49,9 @@ function exibirVideosSalvos() {
                 // Criar um item da lista com a tag de vídeo
                 var itemLista = document.createElement("li");
                 var tagVideo = doc.data().tagVideo.slice(32,43);
-                itemLista.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${tagVideo}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+                itemLista.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/"'+tagVideo+' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
                 listaVideos.appendChild(itemLista);
-            });
+            });itemLista
         })
         .catch(function (error) {
             console.error("Erro ao buscar vídeos: ", error);
